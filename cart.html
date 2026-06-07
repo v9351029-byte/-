@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина - Медовая пасека</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">🍯 Медовая пасека</a>
+        <button id="hamburger" class="hamburger"><i class="fas fa-bars"></i></button>
+        <ul id="nav-links" class="nav-links">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="about.html">О нас</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li>
+                <a href="cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-basket"></i>
+                    <span id="cart-count">0</span>
+                </a>
+            </li>
+        </ul>
+    </header>
+
+    <main class="container">
+        <h1 class="section-title">Ваша корзина</h1>
+        
+        <div id="cart-container">
+            <!-- Рендер через JS -->
+        </div>
+
+        <div id="cart-summary" class="cart-summary">
+            <div class="promo-group">
+                <input type="text" id="promo-input" placeholder="Промокод (попробуйте HONEY10)">
+                <button class="btn" onclick="applyPromo()" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Применить</button>
+            </div>
+            <div>Итого: <span id="total-price" class="total-price">0 ₽</span></div>
+            <button class="btn" onclick="checkout()">Оформить заказ</button>
+        </div>
+    </main>
+
+    <!-- Модальное окно оформления заказа -->
+    <div id="checkout-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <h2 style="margin-bottom:1.5rem; color:var(--secondary);">Оформление заказа</h2>
+            <form onsubmit="submitOrder(event)">
+                <div class="form-group">
+                    <label>Ваше имя *</label>
+                    <input type="text" id="cust-name" required>
+                </div>
+                <div class="form-group">
+                    <label>Телефон *</label>
+                    <input type="tel" id="cust-phone" placeholder="+7 (___) ___-__-__" required>
+                </div>
+                <div class="form-group">
+                    <label>Адрес доставки *</label>
+                    <input type="text" id="cust-address" required>
+                </div>
+                <div class="form-group">
+                    <label>Комментарий</label>
+                    <textarea id="cust-comment"></textarea>
+                </div>
+                <button type="submit" class="btn" style="width:100%;">Отправить заказ</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Медовая пасека. Все права защищены.</p>
+    </footer>
+
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

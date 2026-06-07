@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Купить натуральный мёд и пчеловодный инвентарь.">
+    <title>Товар - Медовая пасека</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">🍯 Медовая пасека</a>
+        <button id="hamburger" class="hamburger"><i class="fas fa-bars"></i></button>
+        <ul id="nav-links" class="nav-links">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="about.html">О нас</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li>
+                <a href="cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-basket"></i>
+                    <span id="cart-count">0</span>
+                </a>
+            </li>
+        </ul>
+    </header>
+
+    <main class="container">
+        <div id="product-detail" class="product-detail">
+            <!-- Рендер через JS -->
+        </div>
+
+        <h2 class="section-title" style="margin-top:3rem;">Похожие товары</h2>
+        <div id="similar-grid" class="products-grid">
+            <!-- Рендер через JS -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Медовая пасека. Все права защищены.</p>
+    </footer>
+
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Контакты медовой пасеки. Адрес, телефон, форма обратной связи.">
+    <title>Контакты - Медовая пасека</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">🍯 Медовая пасека</a>
+        <button id="hamburger" class="hamburger"><i class="fas fa-bars"></i></button>
+        <ul id="nav-links" class="nav-links">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="about.html">О нас</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li>
+                <a href="cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-basket"></i>
+                    <span id="cart-count">0</span>
+                </a>
+            </li>
+        </ul>
+    </header>
+
+    <main class="container">
+        <div class="content-page">
+            <h1>Контакты</h1>
+            <div class="contact-grid">
+                <div>
+                    <h3><i class="fas fa-map-marker-alt"></i> Адрес</h3>
+                    <p>Алтайский край, г. Барнаул, ул. Пасечная, д. 15</p>
+                    
+                    <h3><i class="fas fa-phone"></i> Телефон</h3>
+                    <p><a href="tel:+79991234567">+7 (999) 123-45-67</a></p>
+                    
+                    <h3><i class="fas fa-envelope"></i> Email</h3>
+                    <p><a href="mailto:honey@example.com">honey@example.com</a></p>
+
+                    <h3><i class="fas fa-clock"></i> Режим работы</h3>
+                    <p>Пн-Пт: 9:00 - 18:00<br>Сб: 10:00 - 15:00<br>Вс: выходной</p>
+
+                    <!-- OpenStreetMap -->
+                    <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=83.7%2C53.3%2C83.8%2C53.4&layer=mapnik" style="width:100%; height:250px; border:0; border-radius:10px; margin-top:1rem;" loading="lazy"></iframe>
+                </div>
+                
+                <div>
+                    <h2>Напишите нам</h2>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label>Ваше имя *</label>
+                            <input type="text" id="c-name">
+                            <span id="err-name" class="error-msg">Введите имя</span>
+                        </div>
+                        <div class="form-group">
+                            <label>Телефон *</label>
+                            <input type="tel" id="c-phone">
+                            <span id="err-phone" class="error-msg">Введите корректный номер</span>
+                        </div>
+                        <div class="form-group">
+                            <label>Сообщение *</label>
+                            <textarea id="c-msg"></textarea>
+                            <span id="err-msg" class="error-msg">Введите сообщение</span>
+                        </div>
+                        <button type="submit" class="btn">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Медовая пасека. Все права защищены.</p>
+    </footer>
+
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

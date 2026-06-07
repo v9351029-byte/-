@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Каталог товаров: мёд, пчеловодный инвентарь, продукция пчеловодства.">
+    <title>Каталог - Медовая пасека</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">🍯 Медовая пасека</a>
+        <button id="hamburger" class="hamburger"><i class="fas fa-bars"></i></button>
+        <ul id="nav-links" class="nav-links">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="about.html">О нас</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li>
+                <a href="cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-basket"></i>
+                    <span id="cart-count">0</span>
+                </a>
+            </li>
+        </ul>
+    </header>
+
+    <main class="container">
+        <h1 class="section-title">Каталог товаров</h1>
+        <div class="catalog-layout">
+            <!-- Сайдбар -->
+            <aside class="sidebar">
+                <h3>Категории</h3>
+                <ul>
+                    <li><a href="#" data-cat="all" class="active">Все товары</a></li>
+                    <li><a href="#" data-cat="honey">Мёд</a></li>
+                    <li><a href="#" data-cat="flower"> - Цветочный</a></li>
+                    <li><a href="#" data-cat="linden"> - Липовый</a></li>
+                    <li><a href="#" data-cat="buckwheat"> - Гречишный</a></li>
+                    <li><a href="#" data-cat="acacia"> - Акациевый</a></li>
+                    <li><a href="#" data-cat="equipment">Пчеловодный инвентарь</a></li>
+                    <li><a href="#" data-cat="bee-products">Продукция пчеловодства</a></li>
+                </ul>
+
+                <div class="filter-group">
+                    <h3>Цена (₽)</h3>
+                    <label>От</label>
+                    <input type="number" id="min-price" value="0">
+                    <label>До</label>
+                    <input type="number" id="max-price" value="15000">
+                    <button id="apply-filter" class="btn" style="margin-top:1rem; width:100%; font-size:0.9rem;">Применить</button>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Сортировка</h3>
+                    <select id="sort-select" style="width:100%; padding:0.5rem; border-radius:5px;">
+                        <option value="default">По умолчанию</option>
+                        <option value="price-asc">Цена: по возрастанию</option>
+                        <option value="price-desc">Цена: по убыванию</option>
+                        <option value="name">По названию</option>
+                    </select>
+                </div>
+            </aside>
+
+            <!-- Товары -->
+            <div class="catalog-main">
+                <div id="catalog-grid" class="products-grid">
+                    <!-- Рендер через JS -->
+                </div>
+                <div id="pagination" class="pagination">
+                    <!-- Пагинация через JS -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Медовая пасека. Все права защищены.</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-vk"></i></a>
+            <a href="#"><i class="fab fa-telegram"></i></a>
+        </div>
+    </footer>
+
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
